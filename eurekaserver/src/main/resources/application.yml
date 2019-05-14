@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: test
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+
+logging:
+  level:
+    com.renyijia: debug
