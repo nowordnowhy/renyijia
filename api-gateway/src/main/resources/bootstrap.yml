@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: api-gateway
+
+zuul:
+  routes:
+    user-server:
+      path: /user-server/**
+      serviceId: user-server
+    information-server: /information-server/**
