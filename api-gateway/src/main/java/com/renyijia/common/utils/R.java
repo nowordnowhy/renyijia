@@ -42,16 +42,16 @@ public class R extends HashMap implements Serializable {
         return r;
     }
 
-    /**
-     * 微信發送模板消息
-     */
-    public static R error(String code, String msg) {
-        R r = new R();
-        r.put("code", code);
-        r.put("msg", msg);
-        logger.info("error result====" + msg);
-        return r;
-    }
+//    /**
+//     * 微信發送模板消息
+//     */
+//    public static R error(String code, String msg) {
+//        R r = new R();
+//        r.put("code", code);
+//        r.put("msg", msg);
+//        logger.info("error result====" + msg);
+//        return r;
+//    }
 
     public static R ok(String msg) {
         R r = new R();
@@ -63,7 +63,6 @@ public class R extends HashMap implements Serializable {
     public static R ok(Map<String, Object> map) {
         R r = new R();
         r.putAll(map);
-//        logger.info("ok map result====" + JSO.toJSONString(map));
         return r;
     }
 

@@ -7,4 +7,4 @@ zuul:
     user-server:
       path: /user-server/**
       serviceId: user-server
-    information-server: /information-server/**
+    information-server: /v1/information-server/**

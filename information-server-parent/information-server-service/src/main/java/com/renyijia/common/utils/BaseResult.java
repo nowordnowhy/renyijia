@@ -40,4 +40,5 @@ public class BaseResult<T> implements Serializable {
         this.error = error;
         this.message = "未知异常，请联系管理员";
     }
+
 }
