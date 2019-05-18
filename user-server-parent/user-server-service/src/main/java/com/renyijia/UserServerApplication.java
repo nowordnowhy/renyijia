@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
  * @date : 2019-05-14
  * @email : zhou_wenya@163.com
  */
+@EnableFeignClients
 @EnableEurekaClient
 @SpringBootApplication
 public class UserServerApplication {

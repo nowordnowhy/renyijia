@@ -1,8 +1,6 @@
-package com.renyijia.common.utils;
+package com.renyijia.fallback;
 
 import lombok.Data;
-import lombok.ToString;
-import org.apache.http.HttpStatus;
 
 import java.io.Serializable;
 
@@ -13,7 +11,6 @@ import java.io.Serializable;
  * @email : zhou_wenya@163.com
  */
 @Data
-@ToString
 public class BaseResult<T> implements Serializable {
 
     private static final long serialVersionUID = -5356718467240233205L;
@@ -24,8 +21,7 @@ public class BaseResult<T> implements Serializable {
 
     public BaseResult(T data) {
         this.data = data;
-        this.code = HttpStatus.SC_OK;
-        this.message = "ok";
+        this.code = 200;
     }
 
     public BaseResult(int code, T data, String message) {
@@ -40,8 +36,9 @@ public class BaseResult<T> implements Serializable {
     }
 
     public BaseResult(Exception error) {
-        this.code = HttpStatus.SC_INTERNAL_SERVER_ERROR;
+        this.code = 500;
         this.error = error;
         this.message = "未知异常，请联系管理员";
     }
+
 }

@@ -53,11 +53,27 @@
             <artifactId>httpcore</artifactId>
             <version>4.4.11</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
 
         <dependency>
             <groupId>com.renyijia</groupId>
             <artifactId>information-server-interface</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.renyijia</groupId>
+            <artifactId>user-server-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-hystrix</artifactId>
+            <version>9.7.0</version>
         </dependency>
 
     </dependencies>

@@ -1,5 +1,6 @@
 package com.renyijia.common.utils;
 
+import lombok.Data;
 import org.apache.http.HttpStatus;
 
 import java.io.Serializable;
@@ -10,6 +11,7 @@ import java.io.Serializable;
  * @date : 2019-05-15
  * @email : zhou_wenya@163.com
  */
+@Data
 public class BaseResult<T> implements Serializable {
 
     private static final long serialVersionUID = -5356718467240233205L;
@@ -21,7 +23,6 @@ public class BaseResult<T> implements Serializable {
     public BaseResult(T data) {
         this.data = data;
         this.code = HttpStatus.SC_OK;
-        this.message = "ok";
     }
 
     public BaseResult(int code, T data, String message) {

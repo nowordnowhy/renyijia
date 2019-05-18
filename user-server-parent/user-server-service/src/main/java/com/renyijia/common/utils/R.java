@@ -24,7 +24,6 @@ public class R extends HashMap implements Serializable {
     }
 
     public static R error() {
-        logger.info("");
         logger.info("error result==== 未知异常，请联系管理员");
         return error(HttpStatus.SC_INTERNAL_SERVER_ERROR, "未知异常，请联系管理员");
     }
@@ -42,6 +41,7 @@ public class R extends HashMap implements Serializable {
         return r;
     }
 
+
     public static R ok(String message) {
         R r = new R();
         r.put("message", message);
@@ -58,6 +58,7 @@ public class R extends HashMap implements Serializable {
     public static R ok() {
         return new R();
     }
+
 
 
 }
