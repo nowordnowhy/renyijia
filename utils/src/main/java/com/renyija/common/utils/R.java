@@ -23,7 +23,6 @@ public class R extends HashMap implements Serializable {
     }
 
     public static R error() {
-        log.info("error result==== 未知异常，请联系管理员");
         return error(HttpStatus.SC_INTERNAL_SERVER_ERROR, "未知异常，请联系管理员");
     }
 

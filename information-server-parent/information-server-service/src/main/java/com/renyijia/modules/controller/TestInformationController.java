@@ -22,10 +22,9 @@ public class TestInformationController {
     Logger logger = LoggerFactory.getLogger(getClass());
 
 
-
     @GetMapping("helloInformation")
     public BaseResult<String> helloInformation() {
-        int rad=new Random().nextInt(3000);
+        int rad = new Random().nextInt(3000);
         System.out.println("rad = " + rad);
         try {
             Thread.sleep(rad);
@@ -34,7 +33,7 @@ public class TestInformationController {
         }
 
         logger.info("message is hello_information is {}", System.currentTimeMillis());
-        return new BaseResult<>("hello_information");
+        return new BaseResult<>("hello_information+测试");
     }
 
 

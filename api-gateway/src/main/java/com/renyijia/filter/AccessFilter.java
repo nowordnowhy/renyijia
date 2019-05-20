@@ -1,8 +1,12 @@
 package com.renyijia.filter;
 
+import com.alibaba.fastjson.JSON;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import com.renyija.common.utils.R;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
+import org.apache.http.HttpStatus;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
@@ -14,6 +18,7 @@ import java.util.List;
  * @date : 2019-05-15
  * @email : zhou_wenya@163.com
  */
+@Slf4j
 public class AccessFilter extends ZuulFilter {
 
     private List<String> urlGreens = Arrays.asList("/login");
@@ -52,6 +57,7 @@ public class AccessFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         String servletPath = request.getServletPath();
+        log.info("servletPath is {}", servletPath);
         if (urlGreens.stream().filter(s -> servletPath.contains(s)).count() == 0) {
             //从header中获取token
             String token = request.getHeader("token");
@@ -66,6 +72,7 @@ public class AccessFilter extends ZuulFilter {
             }
         }
         ctx.setSendZuulResponse(true);
+        ctx.setResponseStatusCode(HttpStatus.SC_OK);
         return null;
     }
 
@@ -76,6 +83,9 @@ public class AccessFilter extends ZuulFilter {
      */
     private void theCorresponding(RequestContext ctx) {
         ctx.setSendZuulResponse(false);
-        ctx.setResponseStatusCode(200);
+        ctx.setResponseStatusCode(HttpStatus.SC_UNAUTHORIZED);
+        ctx.getResponse().setCharacterEncoding("utf-8");
+        ctx.getResponse().setContentType("application/json");
+        ctx.setResponseBody(JSON.toJSONString(R.error(HttpStatus.SC_UNAUTHORIZED,"权限认证失败")));
     }
 }
