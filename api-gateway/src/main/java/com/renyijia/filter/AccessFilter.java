@@ -2,15 +2,11 @@ package com.renyijia.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
-import com.netflix.zuul.exception.ZuulException;
 import org.apache.commons.lang.StringUtils;
-import org.apache.http.HttpStatus;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 
 /**
  * @author : zhouwenya

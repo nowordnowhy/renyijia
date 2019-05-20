@@ -1,6 +1,6 @@
 package com.renyijia.feigenclient;
 
-import com.renyijia.fallback.BaseResult;
+import com.renyija.common.utils.BaseResult;
 import com.renyijia.fallback.InformationServerFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;

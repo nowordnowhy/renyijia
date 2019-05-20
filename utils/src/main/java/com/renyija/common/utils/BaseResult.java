@@ -1,7 +1,7 @@
-package com.renyijia.common.utils;
+package com.renyija.common.utils;
 
 import lombok.Data;
-import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpStatus;
 
 import java.io.Serializable;
@@ -13,7 +13,7 @@ import java.io.Serializable;
  * @email : zhou_wenya@163.com
  */
 @Data
-@ToString
+@Slf4j
 public class BaseResult<T> implements Serializable {
 
     private static final long serialVersionUID = -5356718467240233205L;
@@ -22,10 +22,13 @@ public class BaseResult<T> implements Serializable {
     private String message;
     private Exception error;
 
+    public BaseResult() {
+        this.code = HttpStatus.SC_OK;
+    }
+
     public BaseResult(T data) {
         this.data = data;
         this.code = HttpStatus.SC_OK;
-        this.message = "ok";
     }
 
     public BaseResult(int code, T data, String message) {
@@ -44,4 +47,5 @@ public class BaseResult<T> implements Serializable {
         this.error = error;
         this.message = "未知异常，请联系管理员";
     }
+
 }

@@ -1,6 +1,6 @@
 package com.renyijia.modules.controller;
 
-import com.renyijia.common.utils.BaseResult;
+import com.renyija.common.utils.BaseResult;
 import com.renyijia.feigenclient.InformationServerFeignClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +25,7 @@ public class TestUserController {
 
 
     @GetMapping("test1")
-    public com.renyijia.fallback.BaseResult<String> test1() {
+    public BaseResult<String> test1() {
         return informationServerFeignClient.helloInformation();
     }
 

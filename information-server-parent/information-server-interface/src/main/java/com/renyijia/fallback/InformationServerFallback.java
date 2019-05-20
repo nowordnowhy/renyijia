@@ -1,5 +1,6 @@
 package com.renyijia.fallback;
 
+import com.renyija.common.utils.BaseResult;
 import com.renyijia.feigenclient.InformationServerFeignClient;
 import org.springframework.stereotype.Component;
 

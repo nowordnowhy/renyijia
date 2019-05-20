@@ -1,6 +1,6 @@
 package com.renyijia.modules.controller;
 
-import com.renyijia.common.utils.BaseResult;
+import com.renyija.common.utils.BaseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
