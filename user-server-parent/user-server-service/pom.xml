@@ -72,6 +72,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>utf-8</encoding>
+                    <delimiters>
+                        <delimiter>@</delimiter>
+                    </delimiters>
+                    <useDefaultDelimiters>false</useDefaultDelimiters>
+                </configuration>
             </plugin>
         </plugins>
 
@@ -79,19 +92,13 @@
             <resource>
                 <!--声明公共资源-->
                 <directory>src/main/resources</directory>
+                <includes>
+                    <include>application-${profiles.active}.yml</include>
+                    <include>application.yml</include>
+                    <include>**/*</include>
+                </includes>
                 <filtering>true</filtering>
             </resource>
-            <resource>
-                <!--把相对应的独特资源(dev,test,prod这三种的一种)声明，排除jsp文件-->
-                <directory>src/main/resources/${spring.profiles.active}</directory>
-                <excludes>
-                    <exclude>dev/*</exclude>
-                    <exclude>test/*</exclude>
-                    <exclude>pro/*</exclude>
-                    <exclude>*.jsp</exclude>
-                </excludes>
-            </resource>
-
         </resources>
 
     </build>
