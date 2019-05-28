@@ -1,0 +1,44 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+feign:
+  hystrix:
+    enabled: true
+
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 1000
+  OkToRetryOnAllOperations: true
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 1
+  eureka:
+    enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+  instance:
+    prefer-ip-address: true
+
+logging:
+  level:
+    com.renyijia: debug
+
+info:
+  app:
+    name: auth-server
+    version: v1.0.0
