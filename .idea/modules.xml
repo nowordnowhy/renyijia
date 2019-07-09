@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auth-server/auth-server.iml" filepath="$PROJECT_DIR$/auth-server/auth-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurekaserver/eureka-server.iml" filepath="$PROJECT_DIR$/eurekaserver/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/information-server-parent/information-server-interface/information-server-interface.iml" filepath="$PROJECT_DIR$/information-server-parent/information-server-interface/information-server-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/information-server-parent/information-server-parent.iml" filepath="$PROJECT_DIR$/information-server-parent/information-server-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/information-server-parent/information-server-service/information-server-service.iml" filepath="$PROJECT_DIR$/information-server-parent/information-server-service/information-server-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/renyijia.iml" filepath="$PROJECT_DIR$/.idea/renyijia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-server-parent/user-server-interface/user-server-interface.iml" filepath="$PROJECT_DIR$/user-server-parent/user-server-interface/user-server-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-server-parent/user-server-parent.iml" filepath="$PROJECT_DIR$/user-server-parent/user-server-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-server-parent/user-server-service/user-server-service.iml" filepath="$PROJECT_DIR$/user-server-parent/user-server-service/user-server-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
+    </modules>
+  </component>
+</project>

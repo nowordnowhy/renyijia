@@ -19,7 +19,7 @@ import java.util.*;
  * @email : zhou_wenya@163.com
  */
 public class MysqlGenerator {
-    private static final String PACKAGE_NAME = "com.quntum";
+    private static final String PACKAGE_NAME = "com.renyijia";
     private static final String MODULE_NAME = "modules";
     private static final String OUT_PATH = "/Users/zwy/IdeaProjects/renyijia/user-server-parent/user-server-service/src/main/java";
     private static final String MAPPER_PATH = "/Users/zwy/IdeaProjects/renyijia/user-server-parent/user-server-service/src/main/resources";

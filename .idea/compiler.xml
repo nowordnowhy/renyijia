@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="auth-server" />
+        <module name="eureka-server" />
+        <module name="information-server-interface" />
+        <module name="information-server-service" />
+        <module name="user-server-interface" />
+        <module name="user-server-service" />
+        <module name="userservice" />
+        <module name="utils" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-gateway" target="1.8" />
+      <module name="auth-server" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="information-server-interface" target="1.8" />
+      <module name="information-server-parent" target="1.8" />
+      <module name="information-server-service" target="1.8" />
+      <module name="user-server-interface" target="1.8" />
+      <module name="user-server-parent" target="1.8" />
+      <module name="user-server-service" target="1.8" />
+      <module name="user-service" target="1.8" />
+      <module name="userservice" target="1.8" />
+      <module name="utils" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
+      <module name="auth-server" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="information-server-interface" options="-parameters" />
+      <module name="information-server-parent" options="-parameters" />
+      <module name="information-server-service" options="-parameters" />
+      <module name="user-server-interface" options="-parameters" />
+      <module name="user-server-parent" options="-parameters" />
+      <module name="user-server-service" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+      <module name="userservice" options="-parameters" />
+      <module name="utils" options="-parameters" />
+    </option>
+  </component>
+</project>
