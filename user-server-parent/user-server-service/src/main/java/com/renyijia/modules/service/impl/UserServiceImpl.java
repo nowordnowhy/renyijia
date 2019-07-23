@@ -1,6 +1,6 @@
 package com.renyijia.modules.service.impl;
 
-import com.renyijia.modules.entity.User;
+import entity.User;
 import com.renyijia.modules.mapper.UserMapper;
 import com.renyijia.modules.service.IUserService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

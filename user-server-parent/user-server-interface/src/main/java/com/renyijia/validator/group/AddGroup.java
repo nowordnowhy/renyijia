@@ -1,4 +1,4 @@
-package com.renyijia.common.validator.group;
+package com.renyijia.validator.group;
 
 /**
  * @author : zhouwenya
@@ -6,5 +6,5 @@ package com.renyijia.common.validator.group;
  * @date : 2019-05-29
  * @email : zhou_wenya@163.com
  */
-public interface UpdateGroup {
+public interface AddGroup {
 }

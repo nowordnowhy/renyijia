@@ -33,7 +33,7 @@ public class TestInformationController {
         }
 
         logger.info("message is hello_information is {}", System.currentTimeMillis());
-        return new BaseResult<>("hello_information+测试");
+        return BaseResult.getMessage("hello_information+测试");
     }
 
 

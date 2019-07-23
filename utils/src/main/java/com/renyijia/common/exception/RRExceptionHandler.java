@@ -21,7 +21,7 @@ public class RRExceptionHandler {
      */
     @ExceptionHandler(RRException.class)
     public BaseResult<String> handleRRException(RRException e) {
-        return new BaseResult<>(e.getCode(), e.getMessage());
+        return BaseResult.getBaseResult(e.getCode(), e.getMessage());
     }
 
 //    @ExceptionHandler(DuplicateKeyException.class)
@@ -38,7 +38,7 @@ public class RRExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public BaseResult<String> handleException(Exception e) {
-        return new BaseResult<>(e);
+        return BaseResult.getError(e);
 
     }
 }

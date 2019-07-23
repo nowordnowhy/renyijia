@@ -1,6 +1,6 @@
 package com.renyijia.modules.service;
 
-import com.renyijia.modules.entity.User;
+import entity.User;
 import com.baomidou.mybatisplus.service.IService;
 
 /**

@@ -1,4 +1,4 @@
-package com.renyijia.modules.entity;
+package entity;
 
 import com.baomidou.mybatisplus.enums.IdType;
 
@@ -9,8 +9,8 @@ import com.baomidou.mybatisplus.activerecord.Model;
 
 import java.io.Serializable;
 
-import com.renyijia.common.validator.group.AddGroup;
-import com.renyijia.common.validator.group.UpdateGroup;
+import com.renyijia.validator.group.AddGroup;
+import com.renyijia.validator.group.UpdateGroup;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -47,7 +47,7 @@ public class User extends Model<User> {
     /**
      * 邮箱
      */
-    @Email(message = "邮箱格式不正确", groups = {AddGroup.class})
+    @Email(message = "邮箱格式不正确", groups = {AddGroup.class, UpdateGroup.class})
     private String email;
     /**
      * 手机号

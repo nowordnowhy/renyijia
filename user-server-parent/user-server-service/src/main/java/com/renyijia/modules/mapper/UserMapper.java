@@ -1,6 +1,6 @@
 package com.renyijia.modules.mapper;
 
-import com.renyijia.modules.entity.User;
+import entity.User;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
