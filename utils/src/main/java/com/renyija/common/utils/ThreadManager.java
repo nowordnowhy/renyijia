@@ -34,7 +34,7 @@ public class ThreadManager {
      * 通过ThreadPoolExecutor的代理类来对线程池的管理
      */
     public static class ThreadPollProxy {
-        //线程池执行者 ，java内部通过该api实现对线程池管理
+        /* 线程池执行者 ，java内部通过该api实现对线程池管理 */
         private ThreadPoolExecutor poolExecutor;
         private int corePoolSize;
         private int maximumPoolSize;
@@ -61,7 +61,7 @@ public class ThreadManager {
                         //时间单元 ，毫秒级
                         TimeUnit.MILLISECONDS,
                         //线程任务队列
-                        new LinkedBlockingQueue<Runnable>(),
+                        new LinkedBlockingQueue<>(),
                         //创建线程的工厂
                         Executors.defaultThreadFactory());
             }
