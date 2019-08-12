@@ -1,7 +1,7 @@
 package com.renyijia.modules.service;
 
-import com.renyijia.modules.entity.User;
 import com.baomidou.mybatisplus.service.IService;
+import com.renyijia.modules.entity.Information;
 
 /**
  * <p>
@@ -9,8 +9,8 @@ import com.baomidou.mybatisplus.service.IService;
  * </p>
  *
  * @author zhouwenya
- * @since 2019-05-29
+ * @since 2019-08-12
  */
-public interface IUserService extends IService<User> {
+public interface IInformationService extends IService<Information> {
 	
 }

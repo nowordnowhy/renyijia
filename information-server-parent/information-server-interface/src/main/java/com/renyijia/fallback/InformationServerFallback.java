@@ -19,6 +19,6 @@ public class InformationServerFallback implements InformationServerFeignClient {
 
     @Override
     public BaseResult<String> helloInformation() {
-        return new BaseResult<>("tttttt ----");
+        return BaseResult.getBaseResult("tttttt ----");
     }
 }

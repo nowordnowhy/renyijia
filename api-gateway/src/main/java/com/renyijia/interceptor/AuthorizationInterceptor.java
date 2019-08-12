@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.renyija.common.utils.RedisUtils;
 import com.renyijia.annotation.AuthRequired;
 import com.renyijia.common.exception.RRException;
-import entity.User;
+import com.renyijia.modules.entity.User;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

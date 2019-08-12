@@ -21,8 +21,8 @@ import java.util.*;
 public class MysqlGenerator {
     private static final String PACKAGE_NAME = "com.renyijia";
     private static final String MODULE_NAME = "modules";
-    private static final String OUT_PATH = "/Users/zwy/IdeaProjects/renyijia/user-server-parent/user-server-service/src/main/java";
-    private static final String MAPPER_PATH = "/Users/zwy/IdeaProjects/renyijia/user-server-parent/user-server-service/src/main/resources";
+    private static final String OUT_PATH = "/Users/zwy/IdeaProjects/renyijia/information-server-parent/information-server-service/src/main/java";
+    private static final String MAPPER_PATH = "/Users/zwy/IdeaProjects/renyijia/information-server-parent/information-server-service/src/main/resources";
 
     private static final String AUTHOR = "zhouwenya";
 
@@ -47,7 +47,7 @@ public class MysqlGenerator {
      */
     public static void main(String[] args) {
         // 自定义需要填充的字段
-        List<TableFill> tableFillList = new ArrayList<TableFill>();
+        List<TableFill> tableFillList = new ArrayList<>();
 
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator().setGlobalConfig(

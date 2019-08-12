@@ -7,7 +7,7 @@ import com.renyija.common.utils.RedisUtils;
 import com.renyijia.common.utils.ValidatorUtils;
 import com.renyijia.validator.group.AddGroup;
 import com.renyijia.model.LogUser;
-import entity.User;
+import com.renyijia.modules.entity.User;
 import com.renyijia.modules.service.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

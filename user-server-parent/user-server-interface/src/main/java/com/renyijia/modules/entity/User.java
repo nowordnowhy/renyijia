@@ -1,4 +1,4 @@
-package entity;
+package com.renyijia.modules.entity;
 
 import com.baomidou.mybatisplus.enums.IdType;
 

@@ -7,6 +7,36 @@ spring:
       retry:
         enabled: true
 
+  datasource:
+    name: test
+    url: jdbc:mysql://localhost:3306/renyijia?useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    maxActive: 200
+    initialSize: 2
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    redis:
+      database: 1
+      host: 127.0.0.1
+      port: 6379
+      #    password: quntum88
+      jedis:
+        pool:
+          max-active: 8
+          max-wait: -1ms
+          max-idle: 8
+          min-idle: 0
+      timeout: 10000ms
+
 hystrix:
   command:
     default:

@@ -31,7 +31,7 @@ public class TestUserController {
 
     @GetMapping("test2")
     public BaseResult<String> test2() {
-        return new BaseResult<>(informationServerFeignClient.information());
+        return BaseResult.getBaseResult(informationServerFeignClient.information());
     }
 
 
@@ -45,7 +45,7 @@ public class TestUserController {
 //            e.printStackTrace();
 //        }
         logger.info("message is hello-user-server {}", System.currentTimeMillis());
-        BaseResult baseResult = new BaseResult<>("hello-user-server");
+        BaseResult baseResult = BaseResult.getBaseResult("hello-user-server");
         return baseResult;
     }
 
