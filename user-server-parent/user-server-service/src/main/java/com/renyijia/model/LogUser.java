@@ -10,7 +10,9 @@ import lombok.Data;
  */
 @Data
 public class LogUser {
+    private Integer userId;
     private String userName;
     private String password;
+    private String oldPassword;
 }
 
