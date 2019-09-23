@@ -2,7 +2,7 @@ package com.renyijia.modules.controller;
 
 
 import com.renyija.common.utils.BaseResult;
-import com.renyija.common.utils.RedisUtils;
+import com.renyijia.common.utils.RedisUtils;
 import com.renyijia.model.LogUser;
 import com.renyijia.modules.entity.User;
 import com.renyijia.modules.service.IUserService;
@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 
 import static com.renyija.common.utils.BaseResult.getBaseResult;
-import static com.renyija.common.utils.BaseResult.getMessage;
-import static com.renyija.common.utils.Token.createJWT;
 
 /**
  * <p>

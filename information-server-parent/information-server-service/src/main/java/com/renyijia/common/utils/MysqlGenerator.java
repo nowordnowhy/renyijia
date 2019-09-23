@@ -47,7 +47,7 @@ public class MysqlGenerator {
      */
     public static void main(String[] args) {
         // 自定义需要填充的字段
-        List<TableFill> tableFillList = new ArrayList<>();
+        List<TableFill> tableFillList = new ArrayList<TableFill>();
 
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator().setGlobalConfig(
@@ -72,20 +72,20 @@ public class MysqlGenerator {
                             @Override
                             public DbColumnType processTypeConvert(String fieldType) {
                                 System.out.println("转换类型：" + fieldType);
-                                 if ( fieldType.toLowerCase().contains( "tinyint" ) ) {
-                                 return DbColumnType.BOOLEAN;
-                                 }
+                                if ( fieldType.toLowerCase().contains( "tinyint" ) ) {
+                                    return DbColumnType.BOOLEAN;
+                                }
                                 return super.processTypeConvert(fieldType);
                             }
                         }).setDriverName(DRIVER).setUsername(USER_NAME).setPassword(PASSWORD).setUrl(URL))
                 .setStrategy(
                         // 策略配置
                         new StrategyConfig()
-                                 .setCapitalMode(true)// 全局大写命名
+                                .setCapitalMode(true)// 全局大写命名
                                 .setDbColumnUnderline(true)// 全局下划线命名
                                 // .setTablePrefix(new String[]{"unionpay_"})// 此处可以修改为您的表前缀
                                 .setNaming(NamingStrategy.underline_to_camel)// 表名生成策略
-                                 .setInclude(new String[] {"information"}) // 需要生成的表
+                                .setInclude(new String[] {"information"}) // 需要生成的表
                                 // .setExclude(new String[]{"test"}) // 排除生成的表
                                 // 自定义实体，公共字段
                                 // .setSuperEntityColumns(new String[]{"test_id"})
@@ -93,11 +93,11 @@ public class MysqlGenerator {
                                 // 自定义实体父类
 //                                 .setSuperEntityClass("com.baomidou.demo.common.base.BsBaseEntity")
                                 // // 自定义 mapper 父类
-                                 .setSuperMapperClass("com.baomidou.mybatisplus.mapper.BaseMapper")
+                                .setSuperMapperClass("com.baomidou.mybatisplus.mapper.BaseMapper")
                                 // // 自定义 service 父类
-                                 .setSuperServiceClass("com.baomidou.mybatisplus.service.IService")
+                                .setSuperServiceClass("com.baomidou.mybatisplus.service.IService")
                                 // // 自定义 service 实现类父类
-                                 .setSuperServiceImplClass("com.baomidou.mybatisplus.service.impl.ServiceImpl")
+                                .setSuperServiceImplClass("com.baomidou.mybatisplus.service.impl.ServiceImpl")
                                 // 自定义 controller 父类
 //                                 .setSuperControllerClass("com.quntum.Controller")
                                 // 【实体】是否生成字段常量（默认 false）
@@ -108,10 +108,10 @@ public class MysqlGenerator {
 //                                .setEntityBuilderModel(true)
                                 // 【实体】是否为lombok模型（默认 false）<a href="https://projectlombok.org/">document</a>
                                 .setEntityLombokModel(true)
-                        // Boolean类型字段是否移除is前缀处理
-                         .setEntityBooleanColumnRemoveIsPrefix(true)
-                         .setRestControllerStyle(true)
-                         .setControllerMappingHyphenStyle(true)
+                                // Boolean类型字段是否移除is前缀处理
+                                .setEntityBooleanColumnRemoveIsPrefix(true)
+                                .setRestControllerStyle(true)
+                                .setControllerMappingHyphenStyle(true)
                 ).setPackageInfo(
                         // 包配置
                         new PackageConfig().setModuleName(MODULE_NAME).setParent(PACKAGE_NAME)// 自定义包路径
@@ -151,6 +151,5 @@ public class MysqlGenerator {
         // 执行生成
         mpg.execute();
     }
-
 
 }

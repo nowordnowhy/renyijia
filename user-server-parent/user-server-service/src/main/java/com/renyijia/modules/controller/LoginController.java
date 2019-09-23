@@ -3,7 +3,7 @@ package com.renyijia.modules.controller;
 import com.alibaba.druid.util.StringUtils;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.renyija.common.utils.BaseResult;
-import com.renyija.common.utils.RedisUtils;
+import com.renyijia.common.utils.RedisUtils;
 import com.renyijia.common.utils.ValidatorUtils;
 import com.renyijia.validator.group.AddGroup;
 import com.renyijia.model.LogUser;

@@ -58,7 +58,7 @@ public class AccessFilter extends ZuulFilter {
         HttpServletRequest request = ctx.getRequest();
         String servletPath = request.getServletPath();
         log.info("servletPath is {}", servletPath);
-        if (urlGreens.stream().filter(s -> servletPath.contains(s)).count() == 0) {
+        if (urlGreens.stream().noneMatch(servletPath::contains)) {
             //从header中获取token
             String token = request.getHeader("token");
             //如果header中不存在token，则从参数中获取token

@@ -1,5 +1,6 @@
 package com.renyijia;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -14,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
  * @date : 2019-05-15
  * @email : zhou_wenya@163.com
  */
+@MapperScan(basePackages = "com.renyijia.modules.mapper.*")
 @EnableFeignClients
 @EnableEurekaClient
 @SpringBootApplication

@@ -1,7 +1,6 @@
 package com.renyijia.interceptor;
 
 import com.alibaba.fastjson.JSONObject;
-import com.renyija.common.utils.RedisUtils;
 import com.renyijia.annotation.AuthRequired;
 import com.renyijia.common.exception.RRException;
 import com.renyijia.modules.entity.User;
