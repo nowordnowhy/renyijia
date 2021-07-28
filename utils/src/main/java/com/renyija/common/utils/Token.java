@@ -1,12 +1,11 @@
 package com.renyija.common.utils;
 
-import com.alibaba.fastjson.JSON;
-import com.vcg.common.RestTemplateFactory;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.apache.commons.lang3.ObjectUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -21,6 +20,8 @@ import java.util.Map;
 
 public class Token {
 
+    @Autowired
+    private RestTemplate restTemplate;
     private static final String EBCRYPTION = "renyijia";
 
     /**
@@ -81,7 +82,6 @@ public class Token {
     }
 
     public String getAIToken(String client_id, String client_secret) {
-        RestTemplate restTemplate = RestTemplateFactory.getTemplate(); // 获取header信息
         HttpHeaders headers = new HttpHeaders();
         MediaType type = MediaType.parseMediaType("application/x-www-form-urlencoded;charset=UTF-8");
         headers.setContentType(type);
@@ -95,7 +95,6 @@ public class Token {
     }
 
     public String postJson(String url, String body, String client_id, String token) {
-        RestTemplate restTemplate = RestTemplateFactory.getTemplate(); // 获取header信息
         HttpHeaders headers = new HttpHeaders();
         MediaType type = MediaType.parseMediaType("application/json");
         headers.setContentType(type);
